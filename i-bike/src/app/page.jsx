@@ -1,7 +1,11 @@
+import PopularBikes from "@/components/PopularBikes";
+
 export default function Home() {
   return (
     <>
-      <div>Yooo bre...</div>
+      <main>
+        <PopularBikes />
+      </main>
     </>
   );
 }
