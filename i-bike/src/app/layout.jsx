@@ -1,10 +1,10 @@
-import { Poppins } from "next/font/google";
+import { Rajdhani } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
+const rajdhani = Rajdhani({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-rajdhani",
 });
 
 export const metadata = {
@@ -18,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.variable}>{children}</body>
+      <body className={rajdhani.variable}>{children}</body>
     </html>
   );
 }
