@@ -17,3 +17,21 @@ export const getData = async () => {
   const data = await client.fetch(query);
   return data;
 };
+
+export const getDataBySlug = async (slug) => {
+  const query = `*[_type == "product" && slug.current == "${slug}"] [0] {
+    _id,
+    name,
+    description,
+    images,
+    price,
+    price_id,
+    "slug": slug.current,
+    "categories": categories[] -> {
+    name
+    }
+  }`;
+
+  const data = await client.fetch(query);
+  return data;
+};

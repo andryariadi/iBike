@@ -1,7 +1,7 @@
-export default function AddToCartBtn() {
+export default function AddToCartBtn({ btnStyles }) {
   return (
     <>
-      <button className="btn btn-accent">Add To Cart</button>
+      <button className={`${btnStyles}`}>Add To Cart</button>
     </>
   );
 }
