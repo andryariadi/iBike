@@ -37,7 +37,7 @@
     @apply flex justify-center items-center h-[50px] px-8 text-white font-semibold uppercase;
   }
   .btn-icon {
-    @apply flex justify-center items-center w-[50px] h-[50px] text-2xl text-white;
+    @apply flex justify-center items-center w-[50px] h-[50px] text-2xl text-white rounded-sm;
   }
   .btn-accent {
     @apply bg-accent hover:bg-accent-hover transition-all;

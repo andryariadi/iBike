@@ -1,7 +1,7 @@
-export default function AddToCart() {
+export default function AddToCartBtn() {
   return (
     <>
-      <div>Cart Comp</div>
+      <button>Cart Comp</button>
     </>
   );
 }
