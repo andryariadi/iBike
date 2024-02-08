@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Bikes({ bike }) {
   const popularBikeCat = bike.categories.find((cat) => cat.name === "popular");
 
-  console.log({ popularBikeCat, bike }, "<----dibikescomp");
+  // console.log({ popularBikeCat, bike }, "<----dibikescomp");
 
   return (
     <>
