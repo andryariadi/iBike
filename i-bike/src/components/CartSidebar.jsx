@@ -1,7 +1,6 @@
 "use client";
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
-import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { useShoppingCart } from "use-shopping-cart";
 import CartItem from "./CartItem";
 import CheckoutBtn from "./CheckoutBtn";
@@ -11,7 +10,7 @@ export default function CartSidebar() {
 
   return (
     <>
-      <Sheet open={open} onOpenChange={handleCartClick}>
+      <Sheet open={shouldDisplayCart} onOpenChange={handleCartClick}>
         <SheetContent>
           <SheetHeader>
             <SheetTitle>My Shopping Cart ({cartCount})</SheetTitle>
@@ -22,12 +21,12 @@ export default function CartSidebar() {
                 <h5 className="text-black/50">Your cart is empty!</h5>
               </div>
             ) : (
-              <ScrollArea className="bg-rose-500 h-[70vh] xl:h-[80vh] pr-4 mb-4">
+              <div className="scroll-bar h-[70vh] xl:h-[75vh] pr-4 mb-4 overflow-y-auto">
                 {cartDetails &&
                   Object.entries(cartDetails).map(([key, item]) => {
                     return <CartItem item={item} key={key} />;
                   })}
-              </ScrollArea>
+              </div>
             )}
           </>
           {cartCount > 0 && (

@@ -8,9 +8,9 @@ export default function CartItem({ item }) {
 
   return (
     <>
-      <div className="flex items-center justify-between gap-3 md:gap-0 w-full mb-4 border-b border-slate-200">
+      <div className="flex items-center justify-between gap-3 md:gap-0 w-full mb-3 border-b border-slate-200">
         <div className="relative w-[110px] h-[110px]">{item.images && <Image src={urlFor(item.images[0]).url()} alt={item.name} fill priority sizes="(max-width: 110px) 110px, 110px" className="object-contain" />}</div>
-        <div className="bg-amber-500 w-full max-w-[180px] flex flex-col justify-center">
+        <div className="w-full max-w-[180px] flex flex-col justify-center">
           <div className="flex items-center justify-between">
             <h5>{item.name}</h5>
             <button

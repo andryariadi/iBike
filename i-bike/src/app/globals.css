@@ -127,3 +127,32 @@
   }
 }
 /* loader-bike */
+
+/* scrollbar */
+
+.scroll-bar {
+  --sb-track-color: #232e33;
+  --sb-thumb-color: #ed1d24;
+  --sb-size: 7px;
+}
+
+.scroll-bar::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 30px;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 30px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .scroll-bar {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+/* scrollbar */
