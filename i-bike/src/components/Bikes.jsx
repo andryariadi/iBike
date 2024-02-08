@@ -20,8 +20,8 @@ export default function Bikes({ bike }) {
             <Image src={urlFor(bike.images[0]).url()} alt={bike.name} width={230} height={230} className="object-cover" />
           </div>
           <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center gap-[10px] opacity-0 group-hover:opacity-100 transition-all duration-300">
-            <AddToCartBtn btnStyles="btn-accent py-2 px-5 text-white font-semibold uppercase rounded-sm" />
-            <Link href={`/product/${bike.slug}`}>
+            <AddToCartBtn btnStyles="btn-icon btn-accent hover:scale-110" icon={<CgShoppingBag />} />
+            <Link href={`/product/${bike.slug}`} className="hover:scale-110">
               <button className="btn-icon btn-primary">
                 <CgEye />
               </button>

@@ -1,9 +1,9 @@
-import { getData } from "@/lib/data";
 import Link from "next/link";
 import CarouselPopularBikes from "./CarouselPopularBikes";
+import { getPopularBikes } from "@/lib/data";
 
 export default async function PopularBikes() {
-  const bikes = await getData();
+  const bikes = await getPopularBikes();
 
   // console.log(bikes, "<----dipopularcomp");
   return (
