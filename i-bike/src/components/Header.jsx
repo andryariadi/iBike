@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <>
-      <Header>Header Comp</Header>
+      <header>Header Comp</header>
     </>
   );
 }
