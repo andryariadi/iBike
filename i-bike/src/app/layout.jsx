@@ -2,6 +2,7 @@ import { Rajdhani } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CartProvider from "@/components/CartProvider";
 
 const rajdhani = Rajdhani({
   subsets: ["latin"],
@@ -21,9 +22,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={rajdhani.variable}>
-        <Header />
-        {children}
-        <Footer />
+        <CartProvider>
+          <Header />
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
