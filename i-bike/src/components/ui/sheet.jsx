@@ -53,7 +53,7 @@ SheetHeader.displayName = "SheetHeader";
 const SheetFooter = ({ className, ...props }) => <div className={cn("flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2", className)} {...props} />;
 SheetFooter.displayName = "SheetFooter";
 
-const SheetTitle = React.forwardRef(({ className, ...props }, ref) => <SheetPrimitive.Title ref={ref} className={cn("text-center text-lg font-semibold text-slate-950 dark:text-slate-50", className)} {...props} />);
+const SheetTitle = React.forwardRef(({ className, ...props }, ref) => <SheetPrimitive.Title ref={ref} className={cn("text-center mt-3 text-lg font-semibold text-slate-950 dark:text-slate-50", className)} {...props} />);
 SheetTitle.displayName = SheetPrimitive.Title.displayName;
 
 const SheetDescription = React.forwardRef(({ className, ...props }, ref) => <SheetPrimitive.Description ref={ref} className={cn("text-sm text-slate-500 dark:text-slate-400", className)} {...props} />);
