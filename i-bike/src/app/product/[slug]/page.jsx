@@ -20,7 +20,7 @@ export default async function ProductDetail({ params }) {
           <div className="flex flex-col xl:flex-row gap-14">
             <div className="bg-primary/5 hover:bg-primary/10 transition-all duration-300 xl:flex-1 flex justify-center items-center h-[460px] xl:h-[540px] xl:w-[700px]">
               <Suspense fallback={<SkeletonBike />}>
-                <Image src={urlFor(bike.images[0]).url()} alt={bike.name} width={480} height={480} priority className="hover:scale-105 transition-all duration-300" />
+                <Image src={urlFor(bike.images[0]).url()} alt={bike.name} width={480} height={480} priority className="md:hover:scale-105 transition-all duration-300" />
               </Suspense>
             </div>
             <div className="flex-1 flex flex-col justify-center items-start gap-10">

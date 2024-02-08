@@ -15,7 +15,7 @@ export default function CarouselPopularBikes({ bikes }) {
         slidesPerView={2}
         spaceBetween={30}
         breakpoints={{
-          640: {
+          340: {
             slidesPerView: 1,
           },
           768: {
