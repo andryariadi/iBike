@@ -17,7 +17,7 @@ export default function CartSidebar() {
           </SheetHeader>
           <>
             {cartCount === 0 ? (
-              <div className="bg-amber-500 flex justify-center items-center h-[90vh]">
+              <div className="bg-primary/5 flex justify-center items-center h-[90vh]">
                 <h5 className="text-black/50">Your cart is empty!</h5>
               </div>
             ) : (
