@@ -24,10 +24,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={rajdhani.variable}>
         <CartProvider>
-          <Header />
-          {children}
-          <Toaster />
-          <Footer />
+          <div className="flex flex-col min-h-dvh justify-between">
+            <Header />
+            {children}
+            <Toaster />
+            <Footer />
+          </div>
         </CartProvider>
       </body>
     </html>
