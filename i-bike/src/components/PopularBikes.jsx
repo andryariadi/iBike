@@ -1,6 +1,7 @@
 import Link from "next/link";
 import CarouselPopularBikes from "./CarouselPopularBikes";
 import { getPopularBikes } from "@/lib/data";
+import { getUsers } from "@/lib/database/dataUser";
 
 export default async function PopularBikes() {
   const bikes = await getPopularBikes();
