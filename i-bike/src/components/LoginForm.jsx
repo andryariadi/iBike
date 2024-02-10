@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function RegisterForm() {
+export default function LoginForm() {
   return (
     <form action="" className="flex flex-col justify-center items-center gap-5">
       <input type="text" placeholder="Username" name="username" autoComplete="on" className="px-5 py-3 w-[100%] bg-gray-200 rounded-md border border-transparent placeholder-gray-500 focus:outline-none focus:border-transparent" />
