@@ -15,7 +15,7 @@ export default async function ProductDetailPage({ params }) {
   console.log(bike, "<----didetailpage");
   return (
     <>
-      <section className="py-12 md:px-24">
+      <section className="py-12 md:px-[40px] lg:px-24">
         <div className="container mx-auto">
           <div className="flex flex-col xl:flex-row gap-14">
             <div className="bg-primary/5 hover:bg-primary/10 transition-all duration-300 xl:flex-1 flex justify-center items-center h-[460px] xl:h-[540px] xl:w-[700px]">

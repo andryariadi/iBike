@@ -14,7 +14,7 @@ export default function HeaderDetail({ users }) {
   const { cartCount, handleCartClick } = useShoppingCart();
   return (
     <>
-      <header className="bg-white shadow-lg sticky top-0 py-5 z-10 md:px-24">
+      <header className="bg-white shadow-lg sticky top-0 py-5 z-10 md:px-[40px] lg:px-24">
         <div className="container mx-auto flex justify-between items-center">
           <Link href="/">
             <Image src="/icons/ibikez.svg" alt="iBikez Logo" width={70} height={70} className="hover:scale-105 transition-all duration-300" />
