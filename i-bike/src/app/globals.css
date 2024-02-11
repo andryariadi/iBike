@@ -31,7 +31,7 @@
     @apply text-[18px];
   }
   a {
-    @apply font-bold uppercase leading-none hover:text-accent transition-all duration-200;
+    @apply font-bold uppercase leading-none;
   }
   .btn {
     @apply flex justify-center items-center h-[50px] px-8 text-white font-semibold rounded-sm;
