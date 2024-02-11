@@ -1,11 +1,13 @@
-import { signIn, signOut } from "@/lib/auth/auth";
+"use server";
 
-export const handleGoogleLogin = async () => {
-  await signIn("google");
-};
+import { signIn, signOut } from "@/lib/auth/auth";
 
 export const handleGithubLogin = async () => {
   await signIn("github");
+};
+
+export const handleGoogleLogin = async () => {
+  await signIn("google");
 };
 
 export const handleLogout = async () => {

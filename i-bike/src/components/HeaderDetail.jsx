@@ -8,7 +8,7 @@ import { CgShoppingBag } from "react-icons/cg";
 import CartSidebar from "./CartSidebar";
 import UserProfile from "./UserProfile";
 
-export default function HeaderDetail({ users }) {
+export default function HeaderDetail({ users, session }) {
   // console.log(users, "<----diheaderdetail");
 
   const { cartCount, handleCartClick } = useShoppingCart();
@@ -28,7 +28,7 @@ export default function HeaderDetail({ users }) {
               </div>
             </div>
             <CartSidebar />
-            <UserProfile user={users} />
+            <UserProfile user={users} session={session} />
           </div>
         </div>
       </header>
