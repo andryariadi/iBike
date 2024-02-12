@@ -3,10 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useShoppingCart } from "use-shopping-cart";
-import Navbar from "./Navbar";
+import Navbar from "./NavbarLink";
 import { CgShoppingBag } from "react-icons/cg";
 import CartSidebar from "./CartSidebar";
 import UserProfile from "./UserProfile";
+import NavbarLink from "./NavbarLink";
 
 export default function HeaderDetail({ users, session }) {
   // console.log(users, "<----diheaderdetail");
@@ -19,8 +20,8 @@ export default function HeaderDetail({ users, session }) {
           <Link href="/">
             <Image src="/icons/ibikez.svg" alt="iBikez Logo" width={70} height={70} className="hover:scale-105 transition-all duration-300" />
           </Link>
+          <NavbarLink />
           <div className="flex items-center gap-5">
-            <Navbar />
             <div className="relative cursor-pointer" onClick={() => handleCartClick()}>
               <CgShoppingBag size={28} />
               <div className="absolute bg-accent flex justify-center items-center text-white h-5 w-5 rounded-full -right-1 -bottom-1">

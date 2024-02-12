@@ -2,8 +2,10 @@ import { handleLogout } from "@/lib/database/actions/action";
 import Image from "next/image";
 import Link from "next/link";
 import { IoMdLogOut } from "react-icons/io";
+import { useFormStatus } from "react-dom";
 
 export default function UserProfile({ user, session }) {
+  const { pending } = useFormStatus();
   console.log(session, "<----userprofile");
   return (
     <>
@@ -16,10 +18,16 @@ export default function UserProfile({ user, session }) {
             <p className="font-medium">Hi, {session?.user.name}</p>
             <form action={handleLogout}>
               <button className="flex items-center justify-center gap-2 bg-[#D6001C] hover:bg-[#ED1D24] transition-all duration-300 text-white font-medium px-3 py-2 rounded-md">
-                <div>
-                  <IoMdLogOut size={23} />
-                </div>
-                <p>Logout</p>
+                {pending ? (
+                  <div className="loader-btn"></div>
+                ) : (
+                  <>
+                    <div>
+                      <IoMdLogOut size={23} />
+                    </div>
+                    <p>Logout</p>
+                  </>
+                )}
               </button>
             </form>
           </>
