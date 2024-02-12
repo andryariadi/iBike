@@ -9,13 +9,13 @@ export default function UserProfile({ user, session }) {
   console.log(session, "<----userprofile");
   return (
     <>
-      <div className="flex items-center justify-center gap-3">
+      <div className="flex items-center justify-center gap-3 cursor-pointer">
         {session?.user ? (
           <>
             <div className="w-10 h-10 rounded-full overflow-hidden">
               <Image src={session?.user.image || "/images/noavatar.png"} alt="user" width={50} height={50} className="object-cover w-full h-full" />
             </div>
-            <p className="font-medium">Hi, {session?.user.name}</p>
+            <p className="font-semibold">Hi, {session?.user.name}</p>
             <form action={handleLogout}>
               <button className="flex items-center justify-center gap-1 bg-[#D6001C] hover:bg-[#ED1D24] transition-all duration-300 text-white font-medium px-2 py-2 rounded-md">
                 {pending ? (
