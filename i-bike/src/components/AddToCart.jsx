@@ -3,7 +3,7 @@
 import { useShoppingCart } from "use-shopping-cart";
 import { useToast } from "./ui/use-toast";
 
-export default function AddToCartBtn({ btnStyles, text, icon, id, name, currency, price, description, images }) {
+export default function AddToCartBtn({ btnStyles, text, icon, id, name, currency, price, price_id, description, images }) {
   const { addItem } = useShoppingCart();
   const { toast } = useToast();
 
@@ -12,6 +12,7 @@ export default function AddToCartBtn({ btnStyles, text, icon, id, name, currency
     name: name,
     currency: currency,
     price: price,
+    price_id: price_id,
     description: description,
     images: images,
   };
