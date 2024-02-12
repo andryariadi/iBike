@@ -8,7 +8,7 @@ export default function UserProfile({ user, session }) {
   return (
     <>
       <div className="flex items-center justify-center gap-3">
-        {session ? (
+        {session?.user ? (
           <>
             <div className="w-10 h-10 rounded-full overflow-hidden">
               <Image src={session?.user.image || "/images/noavatar.png"} alt="user" width={50} height={50} className="object-cover w-full h-full" />
