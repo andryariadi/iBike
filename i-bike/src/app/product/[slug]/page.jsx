@@ -1,4 +1,4 @@
-import AddToCartBtn from "@/components/AddToCart";
+import AddToCartBtn from "@/components/AddToCartBtn";
 import SkeletonBike from "@/components/SkeletonBike";
 import { getDataBySlug } from "@/lib/data";
 import { urlFor } from "@/lib/sanityConfig";
@@ -34,7 +34,7 @@ export default async function ProductDetailPage({ params }) {
                   <p className="text-lg font-semibold text-accent">${bike.price}</p>
                 </div>
                 <p>{bike.description}</p>
-                <AddToCartBtn text="Add To Cart" btnStyles="btn btn-accent" />
+                <AddToCartBtn id={bike._id} name={bike.name} currency="USD" price={bike.price} price_id={bike.price_id} description={bike.description} images={bike.images} text="Add To Cart" btnStyles="btn btn-accent" />
               </div>
               <div className="flex flex-col gap-3">
                 <div className="flex gap-2">

@@ -5,7 +5,7 @@ export const authConfig = {
   providers: [],
   callbacks: {
     async jwt({ token, user }) {
-      console.log({ token, user }, "<----diauthconfig1");
+      // console.log({ token, user }, "<----diauthconfig1");
       if (user) {
         token.id = user._id;
         token.isAdmin = user.isAdmin;
@@ -14,7 +14,7 @@ export const authConfig = {
     },
     async session({ session, token }) {
       console.log();
-      ({ session, token }), "<----diauthconfig2";
+      // ({ session, token }), "<----diauthconfig2";
       if (token) {
         session.user.id = token.id;
         session.user.isAdmin = token.isAdmin;
@@ -22,7 +22,7 @@ export const authConfig = {
       return session;
     },
     authorized({ auth, request }) {
-      console.log({ auth, request }, "<----diauthconfig3");
+      // console.log({ auth, request }, "<----diauthconfig3");
 
       const user = auth?.user;
 

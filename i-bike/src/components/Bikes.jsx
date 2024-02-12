@@ -3,7 +3,7 @@
 import { urlFor } from "@/lib/sanityConfig";
 import Image from "next/image";
 import { CgEye, CgShoppingBag } from "react-icons/cg";
-import AddToCartBtn from "./AddToCart";
+import AddToCartBtn from "./AddToCartBtn";
 import Link from "next/link";
 
 export default function Bikes({ bike }) {

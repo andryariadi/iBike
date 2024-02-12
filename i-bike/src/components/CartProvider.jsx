@@ -8,7 +8,7 @@ export default function CartProvider({ children }) {
       <CProvider
         mode="payment"
         cartMode="client-only"
-        stripe={process.env.NEXT_PUBLIC_STRIPE_KEY}
+        stripe="pk_test_51ORywZDCU5NvTZ1tfZQXvPRa6aVV5kzhLY7Z5PGocYdlWCjPMFG3Z7gMkmxmX2QrlYN2Q9cgRP498AwwOQ7jKCYJ00UuKY0UyU"
         successUrl="http://localhost:3000/stripe/success"
         cancelUrl="http://localhost:3000/stripe/error"
         language="en-US"
