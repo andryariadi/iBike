@@ -17,7 +17,7 @@ export default function UserProfile({ user, session }) {
             </div>
             <p className="font-medium">Hi, {session?.user.name}</p>
             <form action={handleLogout}>
-              <button className="flex items-center justify-center gap-2 bg-[#D6001C] hover:bg-[#ED1D24] transition-all duration-300 text-white font-medium px-3 py-2 rounded-md">
+              <button className="flex items-center justify-center gap-1 bg-[#D6001C] hover:bg-[#ED1D24] transition-all duration-300 text-white font-medium px-2 py-2 rounded-md">
                 {pending ? (
                   <div className="loader-btn"></div>
                 ) : (
