@@ -7,6 +7,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Pagination } from "swiper/modules";
+import { Suspense } from "react";
+import SkeletonBike from "./SkeletonBike";
 
 export default function CarouselPopularBikes({ bikes }) {
   return (
@@ -36,7 +38,9 @@ export default function CarouselPopularBikes({ bikes }) {
       >
         {bikes.map((bike) => (
           <SwiperSlide key={bike._id}>
-            <Bikes bike={bike} />
+            <Suspense fallback={<SkeletonBike />}>
+              <Bikes bike={bike} />
+            </Suspense>
           </SwiperSlide>
         ))}
       </Swiper>
