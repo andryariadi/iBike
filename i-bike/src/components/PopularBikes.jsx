@@ -6,7 +6,7 @@ import { getUsers } from "@/lib/database/dataUser";
 export default async function PopularBikes() {
   const bikes = await getPopularBikes();
 
-  console.log(bikes, "<----dipopularcomp");
+  // console.log(bikes, "<----dipopularcomp");
   return (
     <>
       <section className="py-5 md:px-[40px] lg:px-24">
