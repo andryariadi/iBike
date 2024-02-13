@@ -1,3 +1,4 @@
+import BikeCategories from "@/components/BikeCategories";
 import { getAllBikes } from "@/lib/data";
 
 export default async function OurBikes() {
@@ -6,7 +7,7 @@ export default async function OurBikes() {
   console.log(bikes, "<----diourbikes");
   return (
     <>
-      <div>Our Bikes Page</div>
+      <BikeCategories bikes={bikes} />
     </>
   );
 }
