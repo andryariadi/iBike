@@ -12,7 +12,7 @@ import NavbarLink from "./NavbarLink";
 export default function HeaderDetail({ users, session }) {
   const { cartCount, handleCartClick } = useShoppingCart();
 
-  console.log(cartCount, "<----diheaderdetail");
+  // console.log(cartCount, "<----diheaderdetail");
 
   return (
     <>

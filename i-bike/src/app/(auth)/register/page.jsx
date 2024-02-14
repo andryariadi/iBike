@@ -1,6 +1,11 @@
 import RegisterForm from "@/components/RegisterForm";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Register",
+  description: "andry ariadi register description",
+};
+
 export default function RegisterPage() {
   return (
     <>

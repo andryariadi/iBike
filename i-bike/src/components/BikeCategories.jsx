@@ -7,7 +7,7 @@ import { Slider } from "./ui/slider";
 import Bikes from "./Bikes";
 import SkeletonBike from "./SkeletonBike";
 
-export default function BikeCategories({ bikes }) {
+export default function BikeCategories({ bikes, session }) {
   const [category, setCategory] = useState("all");
   const [filteredBikes, setFilteredBikes] = useState([]);
   const [price, setPrice] = useState(900);
@@ -21,7 +21,7 @@ export default function BikeCategories({ bikes }) {
     setFilteredBikes(filtered);
   }, [category, price, bikes]);
 
-  console.log({ category, price, filteredBikes }, "<-----dibikecategories");
+  // console.log({ category, price, filteredBikes }, "<-----dibikecategories");
 
   return (
     <>
@@ -60,7 +60,7 @@ export default function BikeCategories({ bikes }) {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] p-4">
                 {filteredBikes.map((bike) => (
                   <Suspense fallback={<SkeletonBike />}>
-                    <Bikes bike={bike} key={bike.price_id} />
+                    <Bikes bike={bike} key={bike.price_id} session={session} />
                   </Suspense>
                 ))}
               </div>

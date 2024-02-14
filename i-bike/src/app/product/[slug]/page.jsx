@@ -8,6 +8,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 
+export const generateMetadata = async ({ params }) => {
+  const { slug } = params;
+
+  const bike = await getDataBySlug(slug);
+
+  return {
+    title: bike.name,
+    description: bike.description,
+  };
+};
+
 export default async function ProductDetailPage({ params }) {
   const { slug } = params;
 

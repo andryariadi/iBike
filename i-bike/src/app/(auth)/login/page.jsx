@@ -4,6 +4,11 @@ import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 import { handleGithubLogin, handleGoogleLogin } from "@/lib/database/actions/action";
 
+export const metadata = {
+  title: "Login",
+  description: "andry ariadi login description",
+};
+
 export default function LoginPage() {
   return (
     <>
