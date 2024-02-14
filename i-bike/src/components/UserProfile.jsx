@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoMdLogOut } from "react-icons/io";
 import { useFormStatus } from "react-dom";
+import { BiLogOutCircle } from "react-icons/bi";
 
 export default function UserProfile({ user, session }) {
   const { pending } = useFormStatus();
@@ -12,10 +13,10 @@ export default function UserProfile({ user, session }) {
       <div className="flex items-center justify-center gap-3 cursor-pointer">
         {session?.user ? (
           <>
-            <div className="w-10 h-10 rounded-full overflow-hidden">
+            <div className="w-10 h-10 rounded-full overflow-hidden hidden md:flex">
               <Image src={session?.user.image || "/images/noavatar.png"} alt="user" width={50} height={50} className="object-cover w-full h-full" />
             </div>
-            <p className="font-semibold">Hi, {session?.user.name}</p>
+            <p className="font-semibold hidden md:flex">Hi, {session?.user.name}</p>
             <form action={handleLogout}>
               <button className="flex items-center justify-center gap-1 bg-[#D6001C] hover:bg-[#ED1D24] transition-all duration-300 text-white font-medium px-2 py-2 rounded-md">
                 {pending ? (
@@ -25,15 +26,18 @@ export default function UserProfile({ user, session }) {
                     <div>
                       <IoMdLogOut size={23} />
                     </div>
-                    <p>Logout</p>
+                    <p className="hidden md:flex">Logout</p>
                   </>
                 )}
               </button>
             </form>
           </>
         ) : (
-          <Link href="/login" className="bg-[#D6001C] hover:bg-[#ED1D24] transition-all duration-300 text-white font-medium px-5 py-3 rounded-full">
-            Login
+          <Link href="/login" className="bg-[#D6001C] hover:bg-[#ED1D24] transition-all duration-300 text-white font-medium px-2 md:px-4 py-2 rounded-full flex items-center justify-center gap-1">
+            <p className="hidden md:flex">Login</p>
+            <div>
+              <BiLogOutCircle size={23} />
+            </div>
           </Link>
         )}
       </div>
