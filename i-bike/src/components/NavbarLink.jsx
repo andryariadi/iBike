@@ -22,7 +22,7 @@ export default function NavbarLink() {
       <nav className="flex items-center gap-0 md:gap-1 text-lg nav-bar">
         {links.map((link, index) => {
           return (
-            <Link href={link.path} key={index} className={`${pathName === link.path && "text-accent"}`}>
+            <Link href={link.path} key={index} className={`${pathName === link.path && "text-accent"} text-xl`}>
               {link.name}
             </Link>
           );

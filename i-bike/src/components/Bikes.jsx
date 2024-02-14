@@ -6,9 +6,10 @@ import { CgEye, CgShoppingBag } from "react-icons/cg";
 import AddToCartBtn from "./AddToCartBtn";
 import Link from "next/link";
 
-export default function Bikes({ bike }) {
+export default function Bikes({ bike, session }) {
   const popularBikeCat = bike.categories.find((cat) => cat.name === "popular");
 
+  // console.log(session, "<----dibikescomp");
   // console.log({ popularBikeCat, bike }, "<----dibikescomp");
 
   return (
@@ -30,6 +31,7 @@ export default function Bikes({ bike }) {
               images={bike.images}
               btnStyles="btn-icon btn-accent hover:scale-110"
               icon={<CgShoppingBag />}
+              session={session}
             />
             <Link href={`/product/${bike.slug}`} className="hover:scale-110">
               <button className="btn-icon btn-primary">

@@ -1,5 +1,6 @@
 import AddToCartBtn from "@/components/AddToCartBtn";
 import SkeletonBike from "@/components/SkeletonBike";
+import { auth } from "@/lib/auth/auth";
 import { getDataBySlug } from "@/lib/data";
 import { urlFor } from "@/lib/sanityConfig";
 import { Bike, Clock, PackageCheck, RefreshCw, ChevronLeft } from "lucide-react";
@@ -11,6 +12,7 @@ export default async function ProductDetailPage({ params }) {
   const { slug } = params;
 
   const bike = await getDataBySlug(slug);
+  const session = await auth();
 
   console.log(bike, "<----didetailpage");
   return (
@@ -34,7 +36,7 @@ export default async function ProductDetailPage({ params }) {
                   <p className="text-lg font-semibold text-accent">${bike.price}</p>
                 </div>
                 <p>{bike.description}</p>
-                <AddToCartBtn id={bike._id} name={bike.name} currency="USD" price={bike.price} price_id={bike.price_id} description={bike.description} images={bike.images} text="Add To Cart" btnStyles="btn btn-accent" />
+                <AddToCartBtn id={bike._id} name={bike.name} currency="USD" price={bike.price} price_id={bike.price_id} description={bike.description} images={bike.images} text="Add To Cart" btnStyles="btn btn-accent" session={session} />
               </div>
               <div className="flex flex-col gap-3">
                 <div className="flex gap-2">
