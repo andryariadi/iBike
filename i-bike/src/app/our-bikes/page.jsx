@@ -11,7 +11,7 @@ export default async function OurBikes() {
   const bikes = await getAllBikes();
   const session = await auth();
 
-  // console.log(bikes, "<----diourbikes");
+  console.log(bikes, "<----diourbikes");
   return (
     <>
       <BikeCategories bikes={bikes} session={session} />
