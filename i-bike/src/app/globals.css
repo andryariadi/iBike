@@ -226,3 +226,21 @@
   color: #d6001c;
 }
 /* navbar */
+
+/* updown hero-img */
+.andry {
+  animation: UpDown 9000ms ease-in-out infinite;
+}
+
+@keyframes UpDown {
+  0% {
+    transform: translateY(4%);
+  }
+  40% {
+    transform: translateY(-4%);
+  }
+  100% {
+    transform: translateY(4%);
+  }
+}
+/* updown hero-img */

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="container mx-auto">
           <div className="flex flex-col gap-5">
             <div className="flex flex-col gap-3">
-              <h3 className="capitalize leading-tight text-2xl">Subscribe to our newslatter</h3>
+              <h3 className="capitalize leading-tight text-2xl md:text-3xl">Subscribe to our newslatter</h3>
               <p className="text-white/60">Be the first to get the lates news about trends, promotions and much more!</p>
             </div>
             <form action="" className="flex items-center flex-col md:flex-row w-full max-w-[720px] mx-auto gap-2">
