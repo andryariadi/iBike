@@ -12,7 +12,7 @@ export const metadata = {
 export default function LoginPage() {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between items-center mt-5 md:mt-0 md:px-[40px] lg:px-24">
+      <div className="flex flex-col md:flex-row justify-between items-center mt-5 md:mt-0 md:px-[40px] lg:px-24 py-10">
         <div className="flex-1  flex items-center justify-center h-[500px] w-screen">
           <div className="flex flex-col gap-7 shadow-md bg-[#E0E0E0] rounded-md p-11 md:p-10 lg:p-11 w-[90%] md:w-full lg:w-[88%] xl:w-[65%]">
             <div className="flex flex-col gap-5">

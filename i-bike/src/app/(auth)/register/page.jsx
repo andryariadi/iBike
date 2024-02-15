@@ -9,7 +9,7 @@ export const metadata = {
 export default function RegisterPage() {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8 lg:gap-0 md:px-[40px] lg:px-24">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-8 lg:gap-0 md:px-[40px] lg:px-24 py-10">
         <div className="relative flex-1 h-[500px] flex items-center justify-self-end">
           <Image src="/images/register.svg" alt="register" fill priority />
         </div>
