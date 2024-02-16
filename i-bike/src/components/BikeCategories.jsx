@@ -67,7 +67,7 @@ export default function BikeCategories({ bikes, session }) {
                 ) : (
                   <>
                     {filteredBikes.map((bike) => (
-                      <motion.div variants={fadeIn("up", 0.5)} initial="hidden" whileInView={"show"} viewport={{ once: true, amount: 0.7 }}>
+                      <motion.div key={bike.id} variants={fadeIn("up", 0.5)} initial="hidden" whileInView={"show"} viewport={{ once: true, amount: 0.7 }}>
                         <Suspense fallback={<SkeletonBike />}>
                           <Bikes bike={bike} key={bike.id} session={session} />
                         </Suspense>
