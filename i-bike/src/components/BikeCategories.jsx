@@ -63,7 +63,7 @@ export default function BikeCategories({ bikes, session }) {
             <main className="w-full xl:w-[950px] ml-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] p-4">
                 {filteredBikes.length < 1 ? (
-                  <h2>No bikes found!</h2>
+                  <h2>No bikes found !</h2>
                 ) : (
                   <>
                     {filteredBikes.map((bike) => (
