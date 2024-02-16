@@ -24,7 +24,7 @@ export default function BikeCategories({ bikes, session }) {
     setFilteredBikes(filtered);
   }, [category, price, bikes]);
 
-  console.log(filteredBikes, "<-----dibikecategories");
+  console.log(bikes, "<-----dibikecategories");
   // console.log({ category, price, filteredBikes }, "<-----dibikecategories");
 
   return (
@@ -69,7 +69,7 @@ export default function BikeCategories({ bikes, session }) {
                     {filteredBikes.map((bike) => (
                       <motion.div variants={fadeIn("up", 0.5)} initial="hidden" whileInView={"show"} viewport={{ once: true, amount: 0.7 }}>
                         <Suspense fallback={<SkeletonBike />}>
-                          <Bikes bike={bike} key={bike.price_id} session={session} />
+                          <Bikes bike={bike} key={bike.id} session={session} />
                         </Suspense>
                       </motion.div>
                     ))}
